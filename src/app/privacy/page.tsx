@@ -1,0 +1,2 @@
+import PageFrame from "@/components/PageFrame";
+export default function PrivacyPage(){return <PageFrame title="سياسة الخصوصية"><div className="glass max-w-3xl rounded-2xl p-6 leading-8 text-zinc-300"><p>تحمي Warm Media بيانات المستخدمين ولا تشارك رقم الهاتف مع المشاركين أو الزوار. تُستخدم بيانات الحساب لتشغيل المصادقة والنقاشات والدعم وفق موافقة المستخدم.</p><p className="mt-4">يتم تخزين جلسات إخفاء الهوية بشكل محدود لغرض التحقق من الميزات داخل غرف النقاش فقط.</p></div></PageFrame>}

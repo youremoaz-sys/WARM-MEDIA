@@ -1,0 +1,5 @@
+"use client";
+import {useState} from "react";
+import PageFrame from "@/components/PageFrame";
+import {createSupabaseBrowser} from "@/lib/supabase-browser";
+export default function SettingsPage(){const[name,setName]=useState("Warm Media");const[msg,setMsg]=useState("");async function save(e:React.FormEvent){e.preventDefault();const s=createSupabaseBrowser();if(!s){setMsg("أضف مفاتيح Supabase.");return;}const {error}=await s.from("site_settings").upsert({key:"brand",value:{name}});setMsg(error?error.message:"تم حفظ إعدادات الهوية.");}return <PageFrame title="إعدادات المنصة" subtitle="الهوية البصرية وإعدادات الموقع"><form onSubmit={save} className="glass grid max-w-xl gap-4 rounded-2xl p-6"><label className="text-sm text-zinc-400">اسم المنصة<input value={name} onChange={e=>setName(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3"/></label>{msg&&<p className="text-sm">{msg}</p>}<button className="rounded-xl red-gradient py-3 font-bold">حفظ الإعدادات</button></form></PageFrame>}

@@ -1,0 +1,2 @@
+import PageFrame from "@/components/PageFrame";
+export default function TermsPage(){return <PageFrame title="الشروط والأحكام"><div className="glass max-w-3xl rounded-2xl p-6 leading-8 text-zinc-300"><p>باستخدام Warm Media يلتزم المستخدم بعدم نشر محتوى مخالف أو الإساءة إلى الآخرين أو محاولة كشف هويات المشاركين.</p><p className="mt-4">لا يجوز للمستخدم العادي ادعاء صفة إدارية أو الإبلاغ عن أنفسه أو غيره لأغراض إساءة. تحتفظ الإدارة بحق إغلاق الغرف وحذف الرسائل المخالفة وحظر الحسابات المخالفة.</p></div></PageFrame>}
